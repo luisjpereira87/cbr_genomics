@@ -7,11 +7,11 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-public class UserItem implements UserDetails {
+public class UserDetailsCustom implements UserDetails {
 
-  private Users user;
+  private transient Users user;
 
-  public UserItem(Users user) {
+  public UserDetailsCustom(Users user) {
     this.user = user;
   }
 
